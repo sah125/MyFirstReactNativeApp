@@ -1,10 +1,28 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View } from "react-native";
+/*import WelcomeMessage from "./components/WelcomeMessage";
+import ProfileCard from "./components/ProfileCard ";*/
+import Header from "./components/Header";
+import Button from "./components/Button";
 
 export default function App() {
+  const handlePress = () => {
+    console.log("Button pressed!");
+  };
   return (
+    /*
+      <ProfileCard name="Nqobani" age={4} onPress={handlePress} />
+      <ProfileCard name="Sphumelelo" age={4} onPress={handlePress} />
+      <WelcomeMessage name="Nqobani" />
+      <WelcomeMessage name="Sphumelelo" />
+*/
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <Header
+        title="Welcome to React Native"
+        subtitle="Building Components with Props"
+      />
+      <Header title="Another Header" />
+      <Button primary={true} />
       <StatusBar style="auto" />
     </View>
   );
@@ -13,8 +31,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#333",
   },
 });
